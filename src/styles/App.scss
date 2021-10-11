@@ -1,0 +1,100 @@
+@import "./variables.scss";
+
+body {
+  margin: 0 15px 0;
+  height: 100vh;
+  font-family: $main-font;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  border-bottom: solid 2px black;
+  justify-items: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    border-bottom: solid 2px black;
+    padding-bottom: 20px;
+    justify-content: space-between;
+  }
+  &__title {
+    color: cadetblue;
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+}
+
+.listClubs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: solid 2px black;
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &--club {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin: 20px 20px;
+      border: solid 2px black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 170px;
+      height: 250px;
+      border-radius: 0px 68px 22px 89px;
+    }
+  }
+}
+
+.addNewClub {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    border: 2px solid black;
+    padding: 15px 15px;
+    margin-bottom: 20px;
+
+    &--input {
+      margin: 5px 0px;
+      width: 200px;
+    }
+
+    &--submit {
+      border: none;
+      width: 200px;
+      padding: 10px 0px;
+      margin-top: 5px;
+      font-family: inherit;
+      font-weight: bold;
+      font-size: 16px;
+      background-color: khaki;
+    }
+  }
+  &__formDetail {
+  }
+}
