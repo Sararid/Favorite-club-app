@@ -6,7 +6,7 @@
 
 # My favorite Club App
 
-Welcome to My favorite Club App . The application allows the user to check, add or erase information related to differents clubs that are in teh list.
+Welcome to My favorite Club App . The application allows the user to check, add or erase information related to differents clubs that are in the list.
 
 # How to check this repo:
 
