@@ -47,10 +47,10 @@ function App() {
       .map((club, index) => {
         return (
           <li key={index} id={club.index} className="listClubs__items--club">
-            <p>#{index} {club.name} </p>
-            <button onClick={handleRemoveBtn} >  <i className="far fa-times-circle" ></i></button>
-            <p>Open on weekdays: {club.openOnWeekdays ? "sí" : "no"}</p>
-            <p>Open on weekends: {club.openOnWeekend ? "sí" : "no"}</p>
+            <p className='listClubs__title'>#{index} {club.name} </p>
+            <button onClick={handleRemoveBtn} className='listClubs__btn'>  <i className="far fa-times-circle listClubs__btn--circle" ></i></button>
+            <p>Open on weekdays: {club.openOnWeekdays ? "yes" : "no"}</p>
+            <p>Open on weekends: {club.openOnWeekend ? "yes" : "no"}</p>
           </li>
         );
       });
@@ -87,7 +87,7 @@ function App() {
         <h1 className="header__title">My favorite club</h1>
         <form onSubmit={handleOnSubmit}>
           <label className="header__input">
-            Show: </label>
+            Show clubs: </label>
           <select name="option" id="option" value={week} onChange={handleWeekFilter} className="header__input--select">
             <option value="all">All</option>
             <option value="weekDays">Open on weekdays</option>

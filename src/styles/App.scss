@@ -19,8 +19,8 @@ body {
     align-items: center;
     align-content: center;
     border-bottom: solid 2px black;
-    padding-bottom: 20px;
-    justify-content: space-between;
+    padding: 20px 0;
+    justify-content: space-around;
   }
   &__title {
     color: cadetblue;
@@ -41,11 +41,26 @@ body {
   align-items: center;
   justify-content: space-around;
   border-bottom: solid 2px black;
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+
+    &--circle {
+      font-size: 25px;
+    }
+  }
   &__items {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
+    :hover {
+      transform: scale(1.1);
+    }
     &--club {
       padding-left: 15px;
       padding-right: 15px;
@@ -54,9 +69,10 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       width: 170px;
       height: 250px;
-      border-radius: 0px 68px 22px 89px;
+      border-radius: 20px 68px 22px 89px;
     }
   }
 }
@@ -74,13 +90,12 @@ body {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
-
     border: 2px solid black;
-    padding: 15px 15px;
+    padding: 20px 20px;
     margin-bottom: 20px;
 
     &--input {
-      margin: 5px 0px;
+      margin: 7px 0px;
       width: 200px;
     }
 
