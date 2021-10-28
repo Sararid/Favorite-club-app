@@ -3,14 +3,16 @@
 body {
   margin: 0 15px 0;
   height: 100vh;
-  font-family: $main-font;
+  font-family: $third-font;
+  background-color: cornsilk;
+  color: $navy;
 }
 
 .header {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
-  border-bottom: solid 2px black;
+  border-bottom: double 2px grey;
   justify-items: center;
 
   @media (min-width: 768px) {
@@ -23,7 +25,9 @@ body {
     justify-content: space-around;
   }
   &__title {
-    color: cadetblue;
+    color: darkgoldenrod;
+    font-weight: bold;
+    text-transform: uppercase;
   }
   &__input {
     display: flex;
@@ -31,48 +35,57 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    &--select {
+      border: solid gray;
+      height: 40px;
+      background-color: transparent;
+      cursor: pointer;
+    }
   }
 }
 
 .listClubs {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   border-bottom: solid 2px black;
+
   &__title {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 20px;
   }
   &__btn {
     border: none;
     background-color: transparent;
 
     &--circle {
-      font-size: 25px;
+      font-size: 30px;
+      color: grey;
+    }
+    &--circle {
+      cursor: pointer;
     }
   }
   &__items {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     :hover {
       transform: scale(1.1);
     }
     &--club {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding: 10px 15px;
       margin: 20px 20px;
-      border: solid 2px black;
+      border: 2px double grey;
+      box-shadow: 5px 10px #888888;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 170px;
+      min-width: 160px;
       height: 250px;
-      border-radius: 20px 68px 22px 89px;
     }
   }
 }
@@ -90,7 +103,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
-    border: 2px solid black;
+    border: 2px double grey;
+    border-radius: 10px;
     padding: 20px 20px;
     margin-bottom: 20px;
 
@@ -108,8 +122,24 @@ body {
       font-weight: bold;
       font-size: 16px;
       background-color: khaki;
+      border-radius: 10px;
+    }
+    &--submit:hover {
+      cursor: pointer;
+      background-color: #85d6de;
     }
   }
-  &__formDetail {
-  }
+}
+
+.span {
+  color: darkgoldenrod;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  height: 10vh;
+
+  text-decoration: overline;
+  align-items: flex-end;
 }

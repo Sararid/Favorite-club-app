@@ -49,8 +49,8 @@ function App() {
           <li key={index} id={club.index} className="listClubs__items--club">
             <p className='listClubs__title'>#{index} {club.name} </p>
             <button onClick={handleRemoveBtn} className='listClubs__btn'>  <i className="far fa-times-circle listClubs__btn--circle" ></i></button>
-            <p>Open on weekdays: {club.openOnWeekdays ? "yes" : "no"}</p>
-            <p>Open on weekends: {club.openOnWeekend ? "yes" : "no"}</p>
+            <p>Open on weekdays:  <span className="span">{club.openOnWeekdays ? "YES" : "NO"}</span></p>
+            <p> Open on weekends: <span className="span">{club.openOnWeekend ? "YES" : "NO"}</span></p>
           </li>
         );
       });
@@ -82,13 +82,14 @@ function App() {
   };
 
   return (
-    <div>
+    <>
       <header className="header">
         <h1 className="header__title">My favorite club</h1>
         <form onSubmit={handleOnSubmit}>
           <label className="header__input">
             Show clubs: </label>
-          <select name="option" id="option" value={week} onChange={handleWeekFilter} className="header__input--select">
+          <select name="option" id="option" value={week} onChange={handleWeekFilter}
+            className="header__input--select">
             <option value="all">All</option>
             <option value="weekDays">Open on weekdays</option>
             <option value="weekEnds">Open on weekends</option>
@@ -96,11 +97,9 @@ function App() {
 
         </form>
       </header>
-
       <section className="listClubs">
         <ul className="listClubs__items"> {renderClubs()} </ul>
       </section>
-
       <section className="addNewClub">
         <h2>Add a new club</h2>
         <form className="addNewClub__form">
@@ -114,7 +113,6 @@ function App() {
             onChange={handleNewClubName}
           />
 
-
           <label className="addNewClub__formDetail"> </label>
           Is it open on weekdays?
           <input className="addNewClub__form--input"
@@ -124,7 +122,6 @@ function App() {
             checked={weekday}
             onChange={handleWeekSelection}
           />
-
           <label>
             Is it open on weekends? </label>
           <input className="addNewClub__form--input"
@@ -134,13 +131,12 @@ function App() {
             checked={weekend}
             onChange={handleWeekSelection}
           />
-
-
           <input className="addNewClub__form--submit" type="submit" value="Add new club" onClick={handleClick} />
         </form>
       </section>
-
-    </div>
+      <footer>        <p className="footer"> Developed by Sara R. ©2021</p>
+      </footer>
+    </>
   );
 }
 
